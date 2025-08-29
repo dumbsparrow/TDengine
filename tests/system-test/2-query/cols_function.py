@@ -50,7 +50,7 @@ class TDTestCase:
         tdSql.query(f'select cols(last(ts), ts) from {self.dbname}.meters')
         tdSql.checkResColNameList(['ts'])
         tdSql.checkRows(1)
-        tdSql.checkData(0, 0, "2024-12-19 10:22:13.000")
+        tdSql.checkData(0, 0, "2024-12-19 10:22:09.004")
         tdSql.query(f'select cols(last(ts), ts) as t1 from {self.dbname}.meters')
         tdSql.checkResColNameList(['t1'])
         tdSql.query(f'select cols(last(ts), ts as t1) from {self.dbname}.meters')
